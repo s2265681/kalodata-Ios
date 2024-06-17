@@ -1,8 +1,8 @@
 //
 //  main.m
-//  kalodata3
+//  SimpleApp2
 //
-//  Created by mac on 2024/6/15.
+//  Created by mac on 2024/6/17.
 //
 
 #import <UIKit/UIKit.h>
