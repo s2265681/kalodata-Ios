@@ -84,7 +84,7 @@
         [self.view addSubview:self.webView];
         
         // 加载一个网页
-        NSURL *url = [NSURL URLWithString:@"https://m.kalodata.com"];
+        NSURL *url = [NSURL URLWithString:@"https://staging.m.kalodata.com"];
 //        NSURL *url = [NSURL URLWithString:@"http://192.168.31.128:10086"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
