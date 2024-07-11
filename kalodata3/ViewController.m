@@ -9,7 +9,7 @@
 #import <WebKit/WebKit.h>
 #import "IAPManager.h"
 
-@interface ViewController ()<WKNavigationDelegate>
+@interface ViewController ()<WKNavigationDelegate, WKScriptMessageHandler>
 @property(nonatomic,strong,readwrite) WKWebView *webView;
 
 @property(nonatomic,strong,readwrite) NSString *mycookies;
@@ -62,8 +62,6 @@
         config.preferences = preference;
         // 是使用h5的视频播放器在线播放, 还是使用原生播放器全屏播放
         config.allowsInlineMediaPlayback = YES;
-        //设置视频是否需要用户手动播放  设置为NO则会允许自动播放
-        config.requiresUserActionForMediaPlayback = NO;
         //设置是否允许画中画技术 在特定设备上有效
         config.allowsPictureInPictureMediaPlayback = YES;
         //设置请求的User-Agent信息中应用程序名称 iOS9后可用
@@ -81,9 +79,7 @@
         [self.view addSubview:self.webView];
         
         // 加载一个网页
-        NSURL *url = [NSURL URLWithString:@"https://staging.m.kalodata.com"];
-//         NSURL *url = [NSURL URLWithString:@"http://192.168.31.130:10086"];
-//        NSURL *url = [NSURL URLWithString:@"http://192.168.10.114:10086"];
+        NSURL *url = [NSURL URLWithString:@"https://m.kalodata.com"];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
@@ -114,11 +110,13 @@
            NSString *message = messageData[@"message"];
          
         // h5 调用native 购买的方法
-        if ([message isEqualToString:@"handleBuy"]) {
-            NSString *productId = messageData[@"productId"];
-            NSLog(@"Buy");
-            [self buyClickWithProductID:productId];
+        if ([message isKindOfClass:[NSString class]] && [message isEqualToString:@"handleBuy"]) {
+                NSString *productId = messageData[@"productId"];
+                NSLog(@"Buy");
+                [self buyClickWithProductID:productId];
         }
+        
+        NSLog(@"message: %@",message);
     }
 }
 

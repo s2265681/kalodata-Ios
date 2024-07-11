@@ -23,8 +23,6 @@
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     ViewController *launchVC = [[ViewController alloc] init];
     
-    // demo
-    GTRecommendController *launchDemoVC = [[GTRecommendController alloc] init];
     self.window.rootViewController    = launchVC;
     self.window.backgroundColor       = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
