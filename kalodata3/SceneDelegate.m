@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "SplashView.h"
+#import "GTRecommendController.h"
 
 @interface SceneDelegate ()
 
@@ -21,6 +22,9 @@
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     ViewController *launchVC = [[ViewController alloc] init];
+    
+    // demo
+    GTRecommendController *launchDemoVC = [[GTRecommendController alloc] init];
     self.window.rootViewController    = launchVC;
     self.window.backgroundColor       = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -28,8 +32,6 @@
     // 添加一个闪屏页面
     [self.window addSubview:({
         SplashView *splashView = [[SplashView alloc] initWithFrame: self.window.bounds];
-
-      
         
         // 3秒后关闭这个页面
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

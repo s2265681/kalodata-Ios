@@ -16,6 +16,8 @@
 		0411DE9B2C1FE7E800F52237 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0411DE9A2C1FE7E800F52237 /* icon.bundle */; };
 		0411DF1A2C2022E800F52237 /* kalodata.png in Resources */ = {isa = PBXBuildFile; fileRef = 0411DF192C2022E800F52237 /* kalodata.png */; };
 		0411DF1C2C20235A00F52237 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0411DF1B2C20235A00F52237 /* Launch Screen.storyboard */; };
+		04A06AC92C3CE65100771704 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A06AC72C3CE65100771704 /* IAPManager.m */; };
+		04A06ACC2C3CE6DD00771704 /* GTRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A06ACB2C3CE6DD00771704 /* GTRecommendController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		0411DE9A2C1FE7E800F52237 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 		0411DF192C2022E800F52237 /* kalodata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kalodata.png; path = Assets.xcassets/kalodata.png; sourceTree = "<group>"; };
 		0411DF1B2C20235A00F52237 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04A06AC62C3CE65100771704 /* IAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
+		04A06AC72C3CE65100771704 /* IAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPManager.m; sourceTree = "<group>"; };
+		04A06ACA2C3CE6DC00771704 /* GTRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTRecommendController.h; path = kalodata3/GTRecommendController.h; sourceTree = SOURCE_ROOT; };
+		04A06ACB2C3CE6DD00771704 /* GTRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTRecommendController.m; path = kalodata3/GTRecommendController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		0411DE3D2C1DCDE600F52237 /* kalodata3 */ = {
 			isa = PBXGroup;
 			children = (
+				04A06AC82C3CE65100771704 /* IAPManager */,
 				0411DE972C1FE04D00F52237 /* SplashView.h */,
 				0411DE982C1FE04D00F52237 /* SplashView.m */,
 				0411DE3E2C1DCDE600F52237 /* AppDelegate.h */,
@@ -82,6 +89,17 @@
 				0411DF1B2C20235A00F52237 /* Launch Screen.storyboard */,
 			);
 			path = kalodata3;
+			sourceTree = "<group>";
+		};
+		04A06AC82C3CE65100771704 /* IAPManager */ = {
+			isa = PBXGroup;
+			children = (
+				04A06ACA2C3CE6DC00771704 /* GTRecommendController.h */,
+				04A06ACB2C3CE6DD00771704 /* GTRecommendController.m */,
+				04A06AC62C3CE65100771704 /* IAPManager.h */,
+				04A06AC72C3CE65100771704 /* IAPManager.m */,
+			);
+			path = IAPManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A06AC92C3CE65100771704 /* IAPManager.m in Sources */,
 				0411DE992C1FE04D00F52237 /* SplashView.m in Sources */,
 				0411DE462C1DCDE600F52237 /* ViewController.m in Sources */,
 				0411DE402C1DCDE600F52237 /* AppDelegate.m in Sources */,
+				04A06ACC2C3CE6DD00771704 /* GTRecommendController.m in Sources */,
 				0411DE512C1DCDE700F52237 /* main.m in Sources */,
 				0411DE432C1DCDE600F52237 /* SceneDelegate.m in Sources */,
 			);
@@ -289,7 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64B5QK67H3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kalodata3/Info.plist;
@@ -318,7 +338,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 64B5QK67H3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kalodata3/Info.plist;
