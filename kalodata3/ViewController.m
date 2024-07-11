@@ -33,7 +33,7 @@
     [self.view addSubview:({
         
         // 禁用边缘滑动手势
-        self.webView.allowsBackForwardNavigationGestures = NO;
+        self.webView.allowsBackForwardNavigationGestures = YES;
         
         // 创建 webview 的 config      // 设置偏好设置
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
